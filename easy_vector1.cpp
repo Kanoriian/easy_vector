@@ -14,7 +14,7 @@ void itc_even_parts_list(const vector <int> &mass, vector <int> &mass2){ //2
     int a = 0;
     for(int i = 0; i < mass.size(); i++){
         if (i % 2 == 0){
-            mass2[i] = mass[a];
+            mass2[a] = mass[i];
             a++;
         }
     }
