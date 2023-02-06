@@ -21,7 +21,7 @@ void itc_even_parts_list(const vector <int> &mass, vector <int> &mass2){ //2 +
 }
 
 int itc_positive_list(const vector <int> &mass){ //3 -
-    if(mass.size() = 0){
+    if(mass.size() == 0){
         return 0;
     }
     int kolvo = 0;
@@ -33,7 +33,7 @@ int itc_positive_list(const vector <int> &mass){ //3 -
 }
 
 int itc_sl_list(const vector <int> &mass){ //4 -
-    if(mass.size() = 0){
+    if(mass.size() == 0){
         return 0;
     }
     int kol = 0;
@@ -45,7 +45,7 @@ int itc_sl_list(const vector <int> &mass){ //4 -
 }
 
 bool itc_same_parts_list(const vector <int> &mass){ //5 -
-    if(mass.size() = 0){
+    if(mass.size() == 0){
         return 0;
     }
     int kol = 0;
