@@ -31,12 +31,23 @@ void itc_rshift_list(vector <int> &mass){ //8
     mass = mass2;
 }
 
+vector int perfomans(vector <int> mass){ //7analog
+    vector <int> mass2;
+    int a = 1;
+    for(int i = 0; i < mass.size(); i++){
+        mass2[i] = mass[a];
+        mass2[a] = mass[i];
+    }
+    mass = mass2;
+    return mass;
+}
+
 void itc_super_shift_list(vector <int> &mass, int n){ //9
     if(n > 0){
-        mass = itc_rev_par_list(mass);
+        mass = perfomans(mass);
     }else{
         for(int i = 0; i < mass.size() - 1; i++){
-            mass = itc_rev_par_list(mass);
+            mass = perfomans(mass);
         }
     }
 }
