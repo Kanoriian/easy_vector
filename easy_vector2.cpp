@@ -31,7 +31,7 @@ void itc_rshift_list(vector <int> &mass){ //8
     mass = mass2;
 }
 
-vector int perfomans(vector <int> mass){ //7analog
+vector <int> perfomans(vector <int> mass){ //7analog
     vector <int> mass2;
     int a = 1;
     for(int i = 0; i < mass.size(); i++){
