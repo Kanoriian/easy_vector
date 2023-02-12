@@ -26,7 +26,7 @@ int itc_positive_list(const vector <int> &mass){ //3 -
     }
     int kolvo = 0;
     for(int i = 0; i < mass.size(); i++){
-        if(mass[i] % 2 == 0){
+        if(mass[i] > 0){
             kolvo++;
         }
     }
@@ -39,8 +39,9 @@ int itc_sl_list(const vector <int> &mass){ //4 -
     }
     int kol = 0;
     for(int i = 0; i < mass.size(); i++){
-        if(mass[i] < mass[i+1])
+        if(mass[i] < mass[i+1]){
             kol++;
+        }
     }
     return kol;
 }
@@ -49,15 +50,11 @@ bool itc_same_parts_list(const vector <int> &mass){ //5 -
     if(mass.size() == 0){
         return 0;
     }
-    int kol = 0;
-    int a, b;
     for(int i = 0; i < mass.size(); i++){
-        a = mass[i] / mass[i];
-        b = mass[i+1] / mass[i+1];
-        if(a == b){
-            kol++;
+        if((mass[i] >= 0 && mass[i+1] >= 0) || (mass[i] < 0 && mass[i+1] < 0)){
+            return true;
+        }else{
+            return false;
         }
     }
-    return kol;
 }
-
