@@ -22,39 +22,38 @@ void itc_even_parts_list(const vector <int> &mass, vector <int> &mass2){ //2 +
 
 int itc_positive_list(const vector <int> &mass){ //3 -
     if(mass.size() == 0){
-        return 0;
-    }
-    int kolvo = 0;
-    for(int i = 0; i < mass.size(); i++){
-        if(mass[i] > 0){
-            kolvo++;
+    }else{
+        int kolvo = 0;
+        for(int i = 0; i < mass.size(); i++){
+            if(mass[i] % 2 == 0){
+                kolvo++;
+            }
         }
+        return kolvo;
     }
-    return kolvo;
 }
 
 int itc_sl_list(const vector <int> &mass){ //4 -
     if(mass.size() == 0){
-        return 0;
-    }
-    int kol = 0;
-    for(int i = 0; i < mass.size(); i++){
-        if(mass[i] < mass[i+1]){
-            kol++;
+    }else{
+        int kolvo = 0;
+        for(int i = 0; i < mass.size()-1; i++){
+            if(mass[i] < mass[i+1]){
+                kolvo++;
+            }
         }
+        return kolvo;
     }
-    return kol;
 }
 
 bool itc_same_parts_list(const vector <int> &mass){ //5 -
     if(mass.size() == 0){
-        return 0;
-    }
-    for(int i = 0; i < mass.size(); i++){
-        if((mass[i] >= 0 && mass[i+1] >= 0) || (mass[i] < 0 && mass[i+1] < 0)){
-            return true;
-        }else{
-            return false;
+    }else{
+        for(int i = 0; i < mass.size(); i++){
+            if((mass[i] >= 0 && mass[i+1] >= 0) || (mass[i] < 0 && mass[i+1] < 0)){
+                return true;
+            }
         }
+        return false;
     }
 }
